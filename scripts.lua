@@ -1,0 +1,39 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local SpeedBtn = Instance.new("TextButton")
+local JumpBtn = Instance.new("TextButton")
+
+-- Configuración de la Ventana
+ScreenGui.Parent = game.CoreGui
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Frame.Position = UDim2.new(0.5, -100, 0.5, -75)
+Frame.Size = UDim2.new(0, 200, 0, 150)
+Frame.Active = true
+Frame.Draggable = true -- ¡Puedes moverlo con el mouse!
+
+Title.Parent = Frame
+Title.Text = "MI EXPLOIT V1"
+Title.Size = UDim2.new(1, 0, 0, 30)
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+
+-- Botón de Velocidad
+SpeedBtn.Parent = Frame
+SpeedBtn.Position = UDim2.new(0, 10, 0, 40)
+SpeedBtn.Size = UDim2.new(0, 180, 0, 40)
+SpeedBtn.Text = "Super Velocidad"
+SpeedBtn.MouseButton1Click:Connect(function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+end)
+
+-- Botón de Salto
+JumpBtn.Parent = Frame
+JumpBtn.Position = UDim2.new(0, 10, 0, 90)
+JumpBtn.Size = UDim2.new(0, 180, 0, 40)
+JumpBtn.Text = "Super Salto"
+JumpBtn.MouseButton1Click:Connect(function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
+end)
+loadstring(game:HttpGet("TU_LINK_RAW_AQUI"))()
